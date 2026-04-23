@@ -1,5 +1,11 @@
   # Publishes play-console-policies/ to GitHub Pages when you push to master or main.
-  # After first run: Repo → Settings → Pages → Build and deployment → Source: GitHub Actions.
+  #
+  # REQUIRED ONCE PER REPO (or configure-pages fails with "Get Pages site failed" / Not Found):
+  # 1. GitHub → your repo → Settings → Pages
+  # 2. Build and deployment → Source: GitHub Actions (not "Deploy from a branch")
+  # 3. Save, then re-run this workflow (Actions tab → workflow → Run workflow)
+  #
+  # Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
   name: Deploy Play Console policies site
 
   on:
