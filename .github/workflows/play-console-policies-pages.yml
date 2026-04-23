@@ -1,41 +1,38 @@
-  # Publishes play-console-policies/ to GitHub Pages when you push to master or main.
-  #
-  # REQUIRED ONCE PER REPO (or configure-pages fails with "Get Pages site failed" / Not Found):
-  # 1. GitHub → your repo → Settings → Pages
-  # 2. Build and deployment → Source: GitHub Actions (not "Deploy from a branch")
-  # 3. Save, then re-run this workflow (Actions tab → workflow → Run workflow)
-  #
-  # Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
-  name: Deploy Play Console policies site
+# Publishes play-console-policies/ to the gh-pages branch (no configure-pages API).
+#
+# REQUIRED ONCE PER REPO:
+# 1. GitHub → Settings → Pages
+# 2. Build and deployment → Source: "Deploy from a branch"
+# 3. Branch: gh-pages, folder: / (root)
+# 4. Push to main/master or Actions → Run workflow
+#
+# If your HTML/CSS lives at the repo root, set folder to "." instead of play-console-policies.
+#
+# Public site: https://<user>.github.io/<repo>/
+name: Deploy Play Console policies site
 
-  on:
-    push:
-      branches: [master, main]
-      paths:
-        - "play-console-policies/**"
-        - ".github/workflows/play-console-policies-pages.yml"
-    workflow_dispatch:
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - "play-console-policies/**"
+      - ".github/workflows/play-console-policies-pages.yml"
+  workflow_dispatch:
 
-  permissions:
-    contents: read
-    pages: write
-    id-token: write
+permissions:
+  contents: write
 
-  concurrency:
-    group: pages-play-console-policies
-    cancel-in-progress: false
+concurrency:
+  group: pages-play-console-policies
+  cancel-in-progress: false
 
-  jobs:
-    deploy:
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: actions/configure-pages@v5
-        - uses: actions/upload-pages-artifact@v3
-          with:
-            path: play-console-policies
-        - id: deployment
-          uses: actions/deploy-pages@v4
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: play-console-policies
+          branch: gh-pages
+          clean: true
