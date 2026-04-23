@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Checklist for Google Play Console policy declarations: privacy, ads, data safety, and more." />
+  <title>Play Console — Policy declarations checklist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">▣</span>
+        <div>
+          <h1>Play Console policy declarations</h1>
+          <p class="tagline">Ten areas every app must complete in Google Play Console — what they mean and where to learn more.</p>
+        </div>
+      </div>
+      <p class="disclaimer">This page is a developer aid, not legal advice. Always use the official Play Console and current Google policies.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <strong class="toc-title">Declarations</strong>
+      <ol class="toc-list">
+        <li><a href="#privacy-policy">Privacy policy</a></li>
+        <li><a href="#ads">Ads</a></li>
+        <li><a href="#app-access">App access</a></li>
+        <li><a href="#content-ratings">Content ratings</a></li>
+        <li><a href="#target-audience">Target audience &amp; content</a></li>
+        <li><a href="#data-safety">Data safety</a></li>
+        <li><a href="#advertising-id">Advertising ID</a></li>
+        <li><a href="#government-apps">Government apps</a></li>
+        <li><a href="#financial-features">Financial features</a></li>
+        <li><a href="#health-apps">Health apps</a></li>
+      </ol>
+      <p class="toc-foot"><a href="https://play.google.com/console/" rel="noopener noreferrer" target="_blank">Open Play Console →</a></p>
+    </nav>
+
+    <main id="main">
+      <section id="privacy-policy" class="card">
+        <div class="card-head">
+          <span class="num">01</span>
+          <h2>Privacy policy</h2>
+        </div>
+        <p class="lead">Google requires a privacy policy URL in your store listing so users can see how you handle personal and sensitive data.</p>
+        <ul class="checklist">
+          <li>Host a policy that matches what your app actually does (collection, use, sharing, retention).</li>
+          <li>Keep the URL working and update the policy when practices change.</li>
+          <li>Align the policy with <strong>Data safety</strong> and any SDKs or analytics you use.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/9859455" rel="noopener noreferrer" target="_blank">User data policy</a>
+          <a href="https://support.google.com/googleplay/android-developer/answer/10787469" rel="noopener noreferrer" target="_blank">Data safety overview</a>
+        </p>
+      </section>
+
+      <section id="ads" class="card">
+        <div class="card-head">
+          <span class="num">02</span>
+          <h2>Ads</h2>
+        </div>
+        <p class="lead">You must declare whether your app contains ads. Play shows a <strong>Contains ads</strong> label when you say yes.</p>
+        <ul class="checklist">
+          <li>Declare accurately — includes third-party ad SDKs, house ads, and promotional content shown like ads.</li>
+          <li>Update the declaration if you add or remove advertising.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/113469" rel="noopener noreferrer" target="_blank">Ads declaration</a>
+          <a href="https://support.google.com/googleplay/android-developer/topic/9858052" rel="noopener noreferrer" target="_blank">Ads &amp; monetization policies</a>
+        </p>
+      </section>
+
+      <section id="app-access" class="card">
+        <div class="card-head">
+          <span class="num">03</span>
+          <h2>App access</h2>
+        </div>
+        <p class="lead">If reviewers cannot use all features without credentials, membership, location, or special hardware, you must provide <strong>instructions to access</strong> restricted parts.</p>
+        <ul class="checklist">
+          <li>Include test accounts, demo logins, or step-by-step paths that work for Google’s review team.</li>
+          <li>Explain paywalls, region locks, or IP restrictions if they affect review.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/9868671" rel="noopener noreferrer" target="_blank">App access &amp; restrictions</a>
+        </p>
+      </section>
+
+      <section id="content-ratings" class="card">
+        <div class="card-head">
+          <span class="num">04</span>
+          <h2>Content ratings</h2>
+        </div>
+        <p class="lead">Complete the rating questionnaire so official authorities (e.g. IARC) assign age-based ratings shown on your store listing.</p>
+        <ul class="checklist">
+          <li>Answer honestly about violence, language, user interaction, and other questionnaire topics.</li>
+          <li>Revisit ratings when you add features or content that could change classification.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/9859655" rel="noopener noreferrer" target="_blank">Content ratings</a>
+        </p>
+      </section>
+
+      <section id="target-audience" class="card">
+        <div class="card-head">
+          <span class="num">05</span>
+          <h2>Target audience &amp; content</h2>
+        </div>
+        <p class="lead">Declare the age groups your app targets. Apps appealing to children face stricter requirements (Families policies, ads, data practices).</p>
+        <ul class="checklist">
+          <li>Declare all target age groups that reflect your design and marketing, not only who you prefer.</li>
+          <li>If children are in scope, plan for Families program rules and restricted data handling.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/9859340" rel="noopener noreferrer" target="_blank">Target audience &amp; content</a>
+          <a href="https://support.google.com/googleplay/android-developer/answer/9893335" rel="noopener noreferrer" target="_blank">Designed for Families</a>
+        </p>
+      </section>
+
+      <section id="data-safety" class="card">
+        <div class="card-head">
+          <span class="num">06</span>
+          <h2>Data safety</h2>
+        </div>
+        <p class="lead">Disclose collection, sharing, security practices, and whether data is optional or required. This appears on your store listing.</p>
+        <ul class="checklist">
+          <li>Inventory data types: account info, location, financial info, health, identifiers, app activity, etc.</li>
+          <li>Declare sharing with third parties (including SDKs) and whether data is encrypted in transit.</li>
+          <li>Users can request deletion if you declare deletion support — honor your commitments.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/10787469" rel="noopener noreferrer" target="_blank">Data safety form</a>
+          <a href="https://developer.android.com/guide/topics/data/collect-share" rel="noopener noreferrer" target="_blank">Data practices (Android docs)</a>
+        </p>
+      </section>
+
+      <section id="advertising-id" class="card">
+        <div class="card-head">
+          <span class="num">07</span>
+          <h2>Advertising ID</h2>
+        </div>
+        <p class="lead">Declare whether your app uses the advertising ID (including via SDKs). Required for releases targeting newer Android versions.</p>
+        <ul class="checklist">
+          <li>If you use ads or measurement that reads GAID, declare usage and respect opt-out / limitations policies.</li>
+          <li>If you do not use it, declare that — but verify no dependency pulls it in unnoticed.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/6048248" rel="noopener noreferrer" target="_blank">Advertising ID</a>
+        </p>
+      </section>
+
+      <section id="government-apps" class="card">
+        <div class="card-head">
+          <span class="num">08</span>
+          <h2>Government apps</h2>
+        </div>
+        <p class="lead">State whether the app is built for or used by a government entity (national, regional, local). Google routes these for appropriate review.</p>
+        <ul class="checklist">
+          <li>Applies to official government services, not every app that mentions civic topics.</li>
+          <li>Keep this accurate when ownership or purpose changes.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/9514050" rel="noopener noreferrer" target="_blank">Government apps &amp; requirements</a>
+        </p>
+      </section>
+
+      <section id="financial-features" class="card">
+        <div class="card-head">
+          <span class="num">09</span>
+          <h2>Financial features</h2>
+        </div>
+        <p class="lead">Declare banking, loans, trading, crypto, BNPL, and similar features so Google can apply the right policy and regional rules.</p>
+        <ul class="checklist">
+          <li>List all financial product types your app offers or facilitates, including via embedded WebViews or partners.</li>
+          <li>Expect additional verification or licensing expectations in some regions.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/13849271" rel="noopener noreferrer" target="_blank">Financial features declaration</a>
+          <a href="https://support.google.com/googleplay/android-developer/answer/9876821" rel="noopener noreferrer" target="_blank">Financial services policy</a>
+        </p>
+      </section>
+
+      <section id="health-apps" class="card">
+        <div class="card-head">
+          <span class="num">10</span>
+          <h2>Health apps</h2>
+        </div>
+        <p class="lead">Declare health-related features (e.g. medical, fitness, mental health, symptoms, records) so Google can enforce Health apps policy requirements.</p>
+        <ul class="checklist">
+          <li>Covers diagnosis/treatment claims, regulated devices, handling of health data, and certain wellness scopes.</li>
+          <li>Medical or clinical claims often need strong evidence and compliance with local regulations.</li>
+        </ul>
+        <p class="links">
+          <a href="https://support.google.com/googleplay/android-developer/answer/14738291" rel="noopener noreferrer" target="_blank">Health apps declaration form</a>
+          <a href="https://support.google.com/googleplay/android-developer/answer/16679511" rel="noopener noreferrer" target="_blank">Health content &amp; services policy</a>
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <p>Built for quick reference. Policies change — verify in <a href="https://play.google.com/console/" rel="noopener noreferrer" target="_blank">Play Console</a> and <a href="https://support.google.com/googleplay/android-developer/" rel="noopener noreferrer" target="_blank">Android developer help</a>.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
